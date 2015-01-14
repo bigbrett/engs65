@@ -1,0 +1,70 @@
+/*
+ * 3D Vector Class 
+ * ENGS 65 project 1
+ * Author: Brett Nicholas
+ * 1/12/2015
+ */
+#include<iostream>
+#include<cmath>
+using namespace std; 
+
+/* 3D Vector class */ 
+class Vector {
+	double[3] components; // x,y,z components rooted at origin
+
+	public: 
+		// con/destructors 
+		void 3DVector(); //init to 0
+		void 3DVector(double[3] components); // origin init to 0
+		~3DVector(); 	
+
+		// Get/setters	
+		double[3] components(void) {return components};
+
+		float magnitude(void) { return sqrt( (components[0])^2 + (components[1])^2 + (components[2])^2 ) };
+		3DVector cross(3DVector v); // cross product
+		double dot(3DVector v); // dot product
+}; 
+
+3DVector::3DVector() { // default constructor
+	this.components = {0,0,0};
+};
+
+3DVector::3DVector(double[3] components) { // constructor
+	this.components = components;
+};
+
+3DVector::3DVector(double[3] components) { // constructor 
+	this.components = components; 
+};
+		
+/* calculates and returns dot product scalar*/ 
+float 3DVector::dot(3DVector v) {
+	private double[3] comp = v.components(); 
+
+	return (float)(this.components[0]*comp[0] + this.components[1]*comp[1] + this.components[2]*comp[2]); 
+}; 
+
+// calculates and returns cross product vector
+3DVector 3DVector::cross(3DVector v) {
+	private double[3] comp = v.components();
+	private double i = this.components[1]*comp[2] - this.components[2]*comp[1];
+	private double j = this.components[2]*comp[0] - this.components[0]*comp[2];
+	private double k = this.components[0]*comp[1] - this.components[1]*comp[0];	
+	private double[3] newdims = {i, j, k};
+	return 3DVector(newdims); 
+}; 
+
+int main(void) {
+	double[3] d1 = {4, 5, 6}; 
+	double[3] d2 = {3, 6, 1}; 
+
+	3DVector v1 {d1};
+	3DVector v2 {d2}; 
+
+	cout << "v1 * v2 = " << v1.dot(v2) << endl; 
+
+	return 0; 
+} 
+
+	

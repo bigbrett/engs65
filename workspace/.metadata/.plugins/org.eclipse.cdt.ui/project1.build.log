@@ -1,0 +1,86 @@
+12:26:37 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../Vector.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Vector.d" -MT"Vector.d" -o "Vector.o" "../Vector.cpp"
+../Vector.cpp:13:9: error: expected member name or ';' after declaration specifiers
+        double [3] components; /* x,y,z components rooted at origin*/
+        ~~~~~~ ^
+../Vector.cpp:18:20: error: expected ')'
+                Vector(double[3] components); /* origin init to 0*/
+                                 ^
+../Vector.cpp:18:9: note: to match this '('
+                Vector(double[3] components); /* origin init to 0*/
+                      ^
+../Vector.cpp:22:9: error: expected member name or ';' after declaration specifiers
+                double[3] components(void) {return components};
+                ~~~~~~^
+../Vector.cpp:24:41: error: use of undeclared identifier 'components'
+                float magnitude(void) { return sqrt( (components[0])^2 + (components[1])^2 + (components[2])^2 ) };
+                                                      ^
+../Vector.cpp:24:61: error: use of undeclared identifier 'components'
+                float magnitude(void) { return sqrt( (components[0])^2 + (components[1])^2 + (components[2])^2 ) };
+                                                                          ^
+../Vector.cpp:24:81: error: use of undeclared identifier 'components'
+                float magnitude(void) { return sqrt( (components[0])^2 + (components[1])^2 + (components[2])^2 ) };
+                                                                                              ^
+../Vector.cpp:30:6: error: member reference type 'Vector *' is a pointer; maybe you meant to use '->'?
+        this.components = {0,0,0};
+        ~~~~^
+            ->
+../Vector.cpp:30:7: error: no member named 'components' in 'Vector'
+        this.components = {0,0,0};
+        ~~~~ ^
+../Vector.cpp:30:20: error: expected expression
+        this.components = {0,0,0};
+                          ^
+../Vector.cpp:33:26: error: expected ')'
+Vector::Vector(double[3] components) { /* constructor*/
+                         ^
+../Vector.cpp:33:15: note: to match this '('
+Vector::Vector(double[3] components) { /* constructor*/
+              ^
+../Vector.cpp:34:6: error: member reference type 'Vector *' is a pointer; maybe you meant to use '->'?
+        this.components = components;
+        ~~~~^
+            ->
+../Vector.cpp:34:7: error: no member named 'components' in 'Vector'
+        this.components = components;
+        ~~~~ ^
+../Vector.cpp:34:20: error: use of undeclared identifier 'components'
+        this.components = components;
+                          ^
+../Vector.cpp:37:26: error: expected ')'
+Vector::Vector(double[3] components) { /* constructor */
+                         ^
+../Vector.cpp:37:15: note: to match this '('
+Vector::Vector(double[3] components) { /* constructor */
+              ^
+../Vector.cpp:37:9: error: redefinition of 'Vector'
+Vector::Vector(double[3] components) { /* constructor */
+        ^
+../Vector.cpp:33:9: note: previous definition is here
+Vector::Vector(double[3] components) { /* constructor*/
+        ^
+../Vector.cpp:38:6: error: member reference type 'Vector *' is a pointer; maybe you meant to use '->'?
+        this.components = components; 
+        ~~~~^
+            ->
+../Vector.cpp:38:7: error: no member named 'components' in 'Vector'
+        this.components = components; 
+        ~~~~ ^
+../Vector.cpp:38:20: error: use of undeclared identifier 'components'
+        this.components = components; 
+                          ^
+../Vector.cpp:42:15: error: return type of out-of-line definition of 'Vector::dot' differs from that in the declaration
+float Vector::dot(Vector v) {
+              ^
+../Vector.cpp:26:10: note: previous declaration is here
+                double dot(Vector v); /* dot product*/
+                       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Vector.o] Error 1
+
+12:26:37 Build Finished (took 317ms)
+

@@ -1,0 +1,21 @@
+/*
+ * MyVect.h
+ *
+ *  Created on: Jan 13, 2015
+ *      Author: bretttt
+ */
+
+#ifndef MYVECT_H_
+#define MYVECT_H_
+
+namespace std {
+
+class MyVect {
+public:
+	MyVect();
+	virtual ~MyVect();
+};
+
+} /* namespace std */
+
+#endif /* MYVECT_H_ */

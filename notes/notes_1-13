@@ -1,0 +1,60 @@
+Notes 1/13
+
+Constructors provide
+	encapsulation
+	initialization 
+	type conversion (using overloading) 
+		constructor(int foo) 
+		constructor(double foo) 
+
+philosophy of garbage collection
+	whoever receives an object (the user) is responsible for deallocating the memory
+
+Never let people touch your intestines -- ie never return the actual object
+	return copies, or have the user give you a container for it
+
+ACCESS OPERATORS
+
+struct {
+	int d; 
+	int k; 
+} w; 
+
+class.d = actual adress and retrieve actual object
+class->d = pointer (equivalent to *class.d and class::d)
+
+Type Checking
+	makes sure parameters are the correct types....
+	Strong vs. Weak Type Checking
+		Weak: I'm not gonna be strict as long as I have a way of converting between types easily 
+		Strong: You must have defined clearly how everything works
+			C and C++ are in the middle
+
+OPERATOR OVERLOADING <-- impt
+	You can overload standard operators like +,-,*,=,!,etc. for ADT
+		add "table" to "chair" yields "dining set" 
+	You can look at this as dog.+(cat)
+	but what if you want to add string to integer? 
+		foo = myint + string ......this would require you to overload the integer + operator, which we don't have access to..
+			we actually can do this!!! You can think of it like "appending" a function to a class 
+				_string& operator + (int& LHS, _string RHS); this defines a new overloaded + operator on integers
+
+	but what about all the overhead.....
+		"friend" access control...
+			if you are my friend, you can see my intestines
+			<< belongs to iostream class, but is a "Friend" of the string class
+
+Default values for a function	
+	int myfunc(int i=7, int j=12, int k=3) { do stuff return int} 
+		if you call myfunc() it will fill in default values
+		myfunc(1) sets i=1 but preserves other default values
+
+Constructor hierarchy
+
+public _c(int l, double p) : b(p), a(l) {
+	do sutuff 
+	} 
+
+	this will call the constructor b(p) and a(l) before calling _c()
+
+

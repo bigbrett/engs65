@@ -1,0 +1,21 @@
+/*
+ * MyVect.cpp
+ *
+ *  Created on: Jan 13, 2015
+ *      Author: bretttt
+ */
+
+#include "MyVect.h"
+
+namespace std {
+
+MyVect::MyVect() {
+	// TODO Auto-generated constructor stub
+
+}
+
+MyVect::~MyVect() {
+	// TODO Auto-generated destructor stub
+}
+
+} /* namespace std */
