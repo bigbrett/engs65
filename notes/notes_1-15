@@ -1,0 +1,19 @@
+NOTES 1-15
+
+Algorithm: An algorithm is a finite sequence of instructions, each of wich has a clear meaning and can be performed with a finite amount of effort, in a finite length of time
+	for any input values, an algothnm always terminates after a finite nuymber of instructions are executed. 
+		EMPHASIS ON "FOR ANY INPUT" : input is how you define performance....j
+
+Recursive algorithm: 
+	is one which is defined in terms of itself
+	example: Calculating factorial : while (f(1) != 1) { f(n) = n*f(n-1) }
+		disadvantage: overhead.....each function call goes to stack...probably not the best idea for tis probablem
+
+RUNTIME ANALYSIS: 
+
+Big O notations
+	The magnitude of te number of operations
+	less precise than the exact number 
+	more useful for comparing two algoritms as input grows larger
+	Rough idea: "term in teh formula which grows most quickly" 
+
