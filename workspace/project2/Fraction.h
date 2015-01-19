@@ -8,7 +8,7 @@
 #ifndef FRACTION_H_
 #define FRACTION_H_
 
-namespace std {
+using namespace std;
 
 class Fraction {
 private:
@@ -18,24 +18,22 @@ private:
 public:
 	Fraction(); // constructor
 	Fraction(int num, int denom); // overloaded constructor to initialize
-	virtual ~Fraction(); // destructor
 	int compare(Fraction operand); // compares magnitude with another fraction
-	static Fraction reduce(Fraction frac); // reduces a fraction
+	void reduce(); // reduces a fraction using Euclids method
 	static int gcd(int a, int b); // finds greatest common factor between two integers
 
 	/* Operator Overloads */
-	Fraction& operator+ (Fraction lhs, const Fraction& rhs);
-	Fraction& operator- (Fraction lhs, const Fraction& rhs);
-	Fraction& operator* (Fraction lhs, const Fraction& rhs);
-	Fraction& operator/ (Fraction lhs, const Fraction& rhs);
+	Fraction& operator +(const Fraction& rhs);
+	Fraction& operator -(const Fraction& rhs);
+	Fraction& operator *(const Fraction& rhs);
+	Fraction& operator /(const Fraction& rhs);
 
-	/* Getters and Setters */
-	int getDenom() const { return denom; } // get denominator
-  void setDenom(int denom) {this->denom = denom;} // set denominator
-  int getNum() const { return num; } // get numerator
-  void setNum(int num) { this->num = num; } // set numerator
+	/* Get/Set functions */
+	int getDenom() const;
+	void setDenom(int denom);
+	int getNum() const;
+	void setNum(int num);
 };
 
-} /* namespace std */
 
 #endif /* FRACTION_H_ */
