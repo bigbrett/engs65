@@ -1,0 +1,61 @@
+Random Access Memory (RAM) 
+
+Address Space: The sum total of all memory addresses in a machine
+	Often times you can't access one bite at a time.....you need to access 8 bytes....64 bits at a time...hence a 64 bit processor
+	Databus: The pipeline that info comes through
+	64 bits: size of Registers 
+	How big of an address one can capture
+
+Contiguous Address space
+	memory locations adjacent and uninterupted
+	allows for OFFSETS
+	also makes runtime faster at the expense of space (arrays vs linked lists) 
+
+Vector 
+	A vector of n components is a set of n values which is ordered such that each value is assigned a specific position in the set
+	vector of length n is indexed from [0] to [n-1]
+	Synonymous with ARRAY
+	vectors/arrays are homogeneous - always a single data type
+		because they need to take up the same ammount of space, as each element needs the same memory offset
+	
+	how do we compute the offset for random access? 
+		Let S be the size of our datatype.....
+		Let V be the address where the array starts in memory
+		Compute the address for index i (i+1st object) in the vector: 
+			address(i) = v + i*s
+			THIS IS A SINGLE COMPUTATION!
+
+	But there is another way to get around homogeneity in C
+		A UNION ... special type of struct {}
+	Union {
+		int dob; 
+		float salary; 
+		studentRecord rec; 
+	} obj;  
+	
+	This automatically allocates memory for the largest potential item
+		don't use its stupid
+
+Matrices/2D Arrays
+	RxC matrix, R rows, C columns
+	Matrices are layed out just like arrays, sequentially in memory
+
+	Row Major form 
+		M[i,j] = starting_address + (i-1)*C*S + (j-1)*S 
+	Column Major form 
+		M[i,j] = starting_address + (j-1)*R*S + (i-1)*S
+
+3D arrays --> RxCxD
+	M[i,j,k] = starting_address + (i-1)*C*S + (j-1)*S + (k-1)*D*S ??? Maybe? 
+	
+	You can't have 3D arrays....this is how you do it w/ pointers
+
+	int *V = new int[10]
+	int **M = new int*[10] 
+
+
+
+
+
+
+
