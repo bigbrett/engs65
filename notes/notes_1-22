@@ -1,0 +1,65 @@
+SPARCITY
+- lots of "zeros" 
+- Concentrated sparsity = predictable
+- Random sparsity = harder
+
+Matrices continued:
+	Lower triangular matrices good, b/c we can index into them 
+
+M[i,j] = M + (i^2 + i)/2 * s + j*s if j<= i
+M[j,i] if i>j 
+m is address for matrix. 
+
+More on Sparcity  in matrices
+	Things are in flux, make sure our  data structure and implementation are efficient
+	Things it probably needs
+		1) update : O(1)
+		2) search : O(1) 
+		3) delete : O(1) 
+		4) report : O()
+	Spacial Constraints	
+		O(n^2) because you need to store everything
+	
+Random Sparcity
+	- needs DYNAMIC memory.....you have no idea where the data will be concentrated
+
+
+
+Memory Management
+
+Heap Manager
+	when there is a request that comes in, make sure you can access the right chunk of memory
+	if you always need 10 byte chunks, then all of a sudden need to malloc(1Gb), there could be space, but not contguous....
+
+	Class myObj {
+		int dob; 
+		float salary; 
+		char* name; 
+		} 
+
+	myObj *p = new myObj // THIS RETURNS A POINTER TO THE OBJECT IINSTATIATED 
+
+
+Inheritance
+
+Class dog {
+	.. 
+	..
+	feed()
+	walk()
+	} 
+
+
+Class Chihuahua: public dog { // the single colon implies that it will inherit something 
+	..
+	..
+	feed() {
+		// here you extend feed
+	} 
+	smell() // this isnt in dog
+
+HOMEWORK: GOOGLE
+	google heap memory management
+	
+
+
