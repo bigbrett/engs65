@@ -50,9 +50,9 @@ int Fraction::compare(Fraction operand) {
  * Params: two fraction objects
  * Returns: new Fraction object sum */
 Fraction& Fraction::operator +(const Fraction& rhs) {
-	int num1, den1, temp1, temp2;
-	den1 = Fraction::lcm(this->getDenom(), rhs.getDenom()); // find LCM of both denominators
-	temp1 = this->num * den1/this->denom; // calculate equivalent fraction1 numerator for LCM
+  int num1, den1, temp1, temp2;
+  den1 = Fraction::lcm(this->getDenom(), rhs.getDenom()); // find LCM of both denominators
+  temp1 = this->num * den1/this->denom; // calculate equivalent fraction1 numerator for LCM
   temp2 = rhs.getNum() * den1/rhs.getDenom(); // calculate equivalent fraction 2 numerator for LCM
   num1 = temp1 + temp2; // add equivalent numerators for LCM
   Fraction *newFrac = new Fraction(num1, den1); // create new fraction object representing sum
