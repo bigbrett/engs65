@@ -1,0 +1,33 @@
+Test
+	Runtime/spacetime analysis
+	conceptual: "what is the point of information hiding" 
+	homeworks/projects
+
+Postfix (polish) notation: 
+10 12 +  // 10+12
+6 8 9 + * // 6 * (8+9)
+
+Theme: As soon as you hit an operator, treat the previous two arguments as tthe operands: THIS EMPLOYS A STACK
+
+Stack S; 
+	loop until input empty; 
+	symbol = get next input; 
+	if (sybol != operand) then S.push(symbol); 
+	else {
+		op2 = s.pop();
+		op1 = s.pop(); 
+		r = op1 (symbol) op2; 
+		s.push(r); 
+	}
+
+things to check: 
+	make sure the stack has at least 2 elements in it before the operator
+	make sure the stack is empty at the end
+	
+TEST QUESTION: 
+	what happens when you have a copy constructor where the argument doesn't have an ampersand
+		stack(stack S) // as opposed to stack(stack &S) 
+			It keeps copying itself and pushing itself onto the stack to make another copy
+
+
+
