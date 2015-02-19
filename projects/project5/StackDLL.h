@@ -22,7 +22,7 @@ class StackDLL {
 		Node* next;
 		Node* prev;
 		public:
-		Node(); // default constructor
+		//Node(); // default constructor
 		Node(T data); // constructor
 		Node(T data, Node* n, Node* p); // constructor
 		Node(const Node& node); // copy constructor
@@ -46,6 +46,11 @@ class StackDLL {
 	StackDLL(); // default constructor
 	~StackDLL(); // default destructor
 
+	//		static Node* createNode() {return Node();}  // calls default constructor
+	//		static Node* createNode(T data) {return *Node(data);} // calls constructor
+	//		static Node* createNode(T data, Node* n, Node* p) {return Node(data, n, p);} // calls constructor
+	//		static Node*	createNode(const Node& node) {return Node(node);}  // calls copy constructor
+
 	/* Getter/Setters */
 	Node* getHead(); // returns head of list
 	Node* getTail(); // returns tail of list
@@ -68,14 +73,13 @@ class StackDLL {
 /*
  * Default constructor for DLL node initializng to NULL
  */
-template<typename T>
-StackDLL<T>::Node::Node()
-{
-	this->data = NULL;
-	this->next = NULL;
-	this->prev = NULL;
-}
-
+//template<typename T>
+//StackDLL<T>::Node::Node()
+//{
+//	this->data = NULL;
+//	this->next = NULL;
+//	this->prev = NULL;
+//}
 
 /*
  * Constructor for DLL node given only data

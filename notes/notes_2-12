@@ -1,0 +1,46 @@
+Binary Trees 
+
+Binary trees
+		out degree either 0 or 2
+		children are ordered left to right`
+
+	A binary tree of depth k is COMPLETE iff:
+		each node of level k is a leaf
+		each node of level less than k has a nonempty left and right child
+
+	COMPLETE binary trees
+		Every complete tree has 2^(k+1) - 1 nodes 
+
+	ALMOST COMPLETE binary trees of level k
+		if you remove all nodes in level k, then you have a complete tree of depth K-1
+		at level k, all nodes are "flush" left
+
+	A tree is balanced iff
+		for all subtrees "t" in the tree, the depth of t's left child subtree compared to t's right child subtree differs by AT MOST 1
+
+LNR
+	method for evaluating trees
+	Left, Node (this), Right
+		good for evaluating operator trees built for infix notation (regular mathematics)
+	LRN 
+		good for evaluating operator trees built for postfix (polish) notation 	
+
+
+Binary Search Trees (BSTs)
+	Goals: efficient searching, insertions, and deletions
+	Recall: Binary seach is O(log(n))
+
+BST
+	Binary Tree, w/ the property that: the value of the key at any node is greater thanall values in the left subtree of that node, and less than or equal to all values in the right subtree, recursively 
+
+
+B-trees
+	a B-tree T is a rooted tree with root [T] with the property that 
+		1) For all nodes x, 
+			n[x] keys are stored in nondecreasing or decreasing order
+			key_1,[x] <= key_2,[x] <=...<= key_n_[x],[x]
+			:
+
+
+
+

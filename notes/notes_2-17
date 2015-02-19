@@ -1,0 +1,27 @@
+B-trees continued
+
+How to guarantee balance while building? 
+	node y is a full node if it has 2t-1 keys
+
+
+InSitu searching: 
+	InSitu = "in place" - no additional memory
+	additional memory usage O(1) 
+
+
+Categories: 
+	O(n^2) 
+		Selection Sort: 
+			find smallest value, then put it in the first position of array, second smallest->second position, etc. 
+		Delayed Selection Sort: 
+			....
+		BubbleSort (or sinking sort):
+			two consecutive loops
+			best case if already sorted, O(n) - no need to swap 	
+		Linear Insertion Sort 
+			i
+
+
+RADIX SORT: ON EXAM 
+	WHEN YOU PROCESS NUMBERS, YOU MUST MAINTAIN ORDER
+	YOU MUST KNOW HOW MANY DIGITS YOU ARE GOING TO CAPTURE
