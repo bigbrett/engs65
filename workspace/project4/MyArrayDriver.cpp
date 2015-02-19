@@ -30,7 +30,7 @@ int main (void) {
 	}
 
 	// test input error handling by giving invalid index
-	std::cout << (*arr)[132] << endl;
+	std::cout << (*arr)[132] << endl << endl << endl;
 
 
 /* TEST PART 2 */
@@ -44,13 +44,13 @@ int main (void) {
 		}
 
 	// test for error if index is invalid
-	std::cout << (*farr)[132] << endl;
+	std::cout << (*farr)[132] << endl << endl << endl;
 
 
 /* TEST PART 3 */
-	string words[SIZE] = {"foo", "bar", "noo", "poo", "GNU", "computer", "beer", "fish", "steak", "Burt's Bees"};
+	string words[SIZE] = {"foo", "bar", "noo", "poo", "GNU", "computer", "beer", "fish", "lol", "Burt's Bees"};
 	string defs[SIZE] = {"def_foo", "def_bar", "def_noo", "def_poo", "def_GNU", "def_computer", "def_beer",
-											"def_fish", "def_steak", "def_Burt's Bees"};
+											"def_fish", "def_lol", "def_Burt's Bees"};
 	Dictionary *dict = new Dictionary();
 
 	//Add word/definition pairs to dictionary
@@ -65,9 +65,11 @@ int main (void) {
 		                             << " definition: " << left << setw(40) << (*dict)[words[i]] << endl;
 	}
 
-	// Test for errors
-	std::cout << "Error test: " << (*dict)["I love potatoes!!!"] << endl;
 
+	// Test for errors
+	string bad = "ERRONEOUS WORD";
+	std::cout << left << setw(6) << "word: " << left << setw(20) << bad
+		                             << " definition: " << left << setw(40) << (*dict)[bad] << endl << endl;
 
 
 
